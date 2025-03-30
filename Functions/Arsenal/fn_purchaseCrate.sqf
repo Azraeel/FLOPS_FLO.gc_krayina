@@ -20,23 +20,25 @@ if (FLO_crates_initialized) exitWith {};
 // Define available crate types with their contents and costs
 FLO_availableCrates = [
     // Format: [ID, Name, Cost, Type of Box, Items Array, Description]
-    ["heavyweapons", "Heavy Weapons Crate", 50, "Box_NATO_WpsSpecial_F", [
-        ["launch_B_Titan_short_F", 2],  // 2x Javelin launchers
-        ["Titan_AT", 10]                // 10x Javelin missiles
-    ], "Contains 2 Javelin launchers and 10 missiles"],
-    
-    ["explosives", "Explosives Crate", 40, "Box_NATO_AmmoOrd_F", [
-        ["SatchelCharge_Remote_Mag", 4],
-        ["DemoCharge_Remote_Mag", 8],
-        ["ClaymoreDirectionalMine_Remote_Mag", 6],
-        ["ACE_Clacker", 2]
-    ], "Contains various explosives and detonators"],
-    
-    ["specialammo", "Special Ammunition Crate", 30, "Box_NATO_Ammo_F", [
-        ["150Rnd_762x54_Box", 5],
-        ["130Rnd_338_Mag", 5],
-        ["7Rnd_408_Mag", 10]
-    ], "Contains special ammunition for machine guns and sniper rifles"]
+    ["heavyweapons", "Heavy Weapons Crate", 35, "Box_NATO_WpsSpecial_F", [
+        ["rhs_weap_fgm148", 1],         // 1x Javelin launchers
+        ["rhs_fgm148_magazine_AT", 5],  // 5x Javelin missiles
+        ["launch_NLAW_F", 3]            // 3x NLAWs
+    ], "Contains 1 Javelin launcher with 5 missiles and 3 NLAWs"],
+
+    ["specialweapons", "Special Weapons Crate", 35, "Box_NATO_Wps_F", [
+        ["rhsusf_acc_anpas13gv1", 1],
+        ["ACE_10Rnd_127x99_AMAX_mag", 10],
+        ["ACE_10Rnd_127x99_API_mag", 5],
+        ["SNIPEX_5rnd_AP", 10],
+        ["SNIPEX_5rnd_API", 5]
+    ], "Contains 1 ANPAS-13GV1, 10x 12.7mm AMAX, 10x 12.7mm API, 5x 12.7mm AP, and 5x 12.7mm API rounds"],
+
+    ["equipment", "NVD Equipment Crate", 50, "Box_NATO_Ammo_F", [
+        ["rhs_1PN138", 2],
+        ["rhsusf_ANPVS_14", 3],
+        ["rhsusf_ANPVS_15", 1]
+    ], "Contains 6 night vision goggles"]
 ];
 
 FLO_crates_initialized = true;

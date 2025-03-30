@@ -84,67 +84,97 @@ if (((typeOf player == "B_G_officer_F") or (typeOf player == F_Officer) or (lead
     } forEach [F_Bike_01];
     
     // CARS
-    {
-        [
-            _x != "",
-            [2101, _x, _x, "CAR", 35, "Screens\FOBA\Offroad_01_Base_ca.paa", [1,1,1,1]]
-        ] call FLO_fnc_addConditionalItem;
-    } forEach [F_Car_01, F_Car_02, F_Car_03, F_Car_04, F_Car_05, F_Car_06];
+    [2101, F_Car_02, F_Car_02, "CAR", 10, "Screens\FOBA\Offroad_01_Base_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+
+    [2101, F_Car_05, F_Car_05, "CAR", 10, "Screens\FOBA\Offroad_01_Base_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+
+    [2101, F_Car_03, F_Car_03, "CAR", 20, "Screens\FOBA\Offroad_01_Base_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+
+    [2101, F_Car_01, F_Car_01, "CAR", 30, "Screens\FOBA\Offroad_01_Base_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+
+    [2101, F_Car_06, F_Car_06, "CAR", 35, "Screens\FOBA\Offroad_01_Base_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+
+    [2101, F_Car_04, F_Car_04, "CAR", 70, "Screens\FOBA\Offroad_01_Base_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
     
     // MRAPs
-    {
-        [
-            _x != "",
-            [2101, _x, _x, "MRAP", 55, "Screens\FOBA\car_ca.paa", [1,1,1,1]]
-        ] call FLO_fnc_addConditionalItem;
-    } forEach [F_MRAP_01, F_MRAP_02, F_MRAP_03, F_MRAP_04, F_MRAP_05, F_MRAP_06];
-    
+    [2101, F_MRAP_01, F_MRAP_01, "ATGM Platform", 30, "Screens\FOBA\car_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+
+    [2101, F_MRAP_04, F_MRAP_04, "MRAP", 40, "Screens\FOBA\car_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+
+    [2101, F_MRAP_05, F_MRAP_05, "MRAP", 40, "Screens\FOBA\car_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+
+    [2101, F_MRAP_06, F_MRAP_06, "MRAP", 50, "Screens\FOBA\car_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+
+    [2101, F_MRAP_03, F_MRAP_03, "MRAP", 55, "Screens\FOBA\car_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+
+    [2101, F_MRAP_02, F_MRAP_02, "MRAP", 65, "Screens\FOBA\car_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+        
     // TRUCKS (Normal)
     {
         [
             _x != "",
-            [2101, _x, _x, "TRUCK", 65, "\a3\soft_f_gamma\Truck_01\Data\UI\Truck_01_Ammo_CA.paa", [1,1,1,1]]
+            [2101, _x, _x, "TRUCK", 35, "\a3\soft_f_gamma\Truck_01\Data\UI\Truck_01_Ammo_CA.paa", [1,1,1,1]]
         ] call FLO_fnc_addConditionalItem;
-    } forEach [F_Truck_01, F_Truck_02, F_Truck_06];
-    
+    } forEach [F_Truck_01, F_Truck_02];
+
+    [2101, "rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy", "rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy", "TRUCK", 35, "\a3\soft_f_gamma\Truck_01\Data\UI\Truck_01_Ammo_CA.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+
     // TRUCKS (Special - Orange)
     {
         [
             _x != "",
-            [2101, _x, _x, "TRUCK", 65, "\a3\soft_f_gamma\Truck_01\Data\UI\Truck_01_Ammo_CA.paa", [1,0.6,0,1]]
+            [2101, _x, _x, "TRUCK", 50, "\a3\soft_f_gamma\Truck_01\Data\UI\Truck_01_Ammo_CA.paa", [1,0.6,0,1]]
         ] call FLO_fnc_addConditionalItem;
     } forEach [F_Truck_03, F_Truck_04];
+
+    // FUEL TRUCK
+    [2101, "UA_KRAZ_FUEL", "UA_KRAZ_FUEL", "FUEL TRUCK", 50, "\a3\soft_f_gamma\Truck_01\Data\UI\Truck_01_Ammo_CA.paa", [1,0.6,0,1]] call FLO_fnc_addListBoxItem;
     
     // TRUCK RESPAWN (Yellow-Green)
     [
         F_Truck_05 != "",
-        [2101, F_Truck_05, F_Truck_05, "TRUCK RESPAWN", 65, "\a3\soft_f_gamma\Truck_01\Data\UI\Truck_01_Ammo_CA.paa", [0.9,1,0,1]]
+        [2101, F_Truck_05, F_Truck_05, "RESPAWN TRUCK", 50, "\a3\soft_f_gamma\Truck_01\Data\UI\Truck_01_Ammo_CA.paa", [0.9,1,0,1]]
     ] call FLO_fnc_addConditionalItem;
+
+    // AAA TRUCK
+    [2101, F_Truck_06, F_Truck_06, "AAA TRUCK", 70, "\a3\soft_f_gamma\Truck_01\Data\UI\Truck_01_Ammo_CA.paa", [0,1,0,1]] call FLO_fnc_addListBoxItem;
     
-    // APCs - Only if radar is nearby
+    // RADAR DEPENDENT VEHICLES
     private _hasRadar = count (nearestObjects [position player, ["B_Radar_System_01_F", "I_E_Radar_System_01_F"], 500]) > 0;
     
     if (_hasRadar) then {
-        {
-            [
-                _x != "",
-                [2101, _x, _x, "APC", 75, "\A3\armor_f_beta\APC_Tracked_01\Data\UI\APC_Tracked_01_AA_ca.paa", [0.2,0.6,0.99,1]]
-            ] call FLO_fnc_addConditionalItem;
-        } forEach [F_APC_01, F_APC_02, F_APC_03, F_APC_04, F_APC_05, F_APC_06];
-        
+        // APCs & IFVs  - Only if radar is nearby
+        [2101, F_APC_04, F_APC_04, "APC", 65, "\A3\armor_f_beta\APC_Tracked_01\Data\UI\APC_Tracked_01_AA_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
+
+        [2101, F_APC_03, F_APC_03, "APC", 80, "\A3\armor_f_beta\APC_Tracked_01\Data\UI\APC_Tracked_01_AA_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
+
+        [2101, F_APC_02, F_APC_02, "APC", 95, "\A3\armor_f_beta\APC_Tracked_01\Data\UI\APC_Tracked_01_AA_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
+
+        [2101, F_APC_01, F_APC_01, "APC-IFV", 120, "\A3\armor_f_beta\APC_Tracked_01\Data\UI\APC_Tracked_01_AA_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
+
+        [2101, F_APC_05, F_APC_05, "IFV", 140, "\A3\armor_f_beta\APC_Tracked_01\Data\UI\APC_Tracked_01_AA_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
+
+        [2101, F_APC_06, F_APC_06, "IFV", 150, "\A3\armor_f_beta\APC_Tracked_01\Data\UI\APC_Tracked_01_AA_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
+
+        [2101, "RHS_M2A2_wd", "RHS_M2A2_wd", "IFV", 190, "Screens\FOBA\tank_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
+
         // TANKS - Only if radar is nearby
-        {
-            [
-                _x != "",
-                [2101, _x, _x, "TANK", 95, "Screens\FOBA\tank_ca.paa", [0.2,0.6,0.99,1]]
-            ] call FLO_fnc_addConditionalItem;
-        } forEach [F_TNK_01, F_TNK_02, F_TNK_03, F_TNK_04];
+        [2101, F_TNK_01, F_TNK_01, "TANK", 225, "Screens\FOBA\tank_ca.paa", [0.0,0.2,0.4,1]] call FLO_fnc_addListBoxItem;
+        
+        [2101, F_TNK_02, F_TNK_02, "TANK", 300, "Screens\FOBA\tank_ca.paa", [0.0,0.2,0.4,1]] call FLO_fnc_addListBoxItem;
+
+        [2101, F_TNK_03, F_TNK_03, "TANK", 350, "Screens\FOBA\tank_ca.paa", [0.0,0.2,0.4,1]] call FLO_fnc_addListBoxItem;
+
+        [2101, F_TNK_04, F_TNK_04, "TANK", 450, "Screens\FOBA\tank_ca.paa", [0.0,0.2,0.4,1]] call FLO_fnc_addListBoxItem;
+
+        [2101, "rhsusf_m1a1hc_wd", "rhsusf_m1a1hc_wd", "TANK", 550, "Screens\FOBA\tank_ca.paa", [0.0,0.2,0.4,1]] call FLO_fnc_addListBoxItem;
+
         
         // ARTILLERY - Only if radar is nearby
         {
             [
                 _x != "",
-                [2101, _x, _x, "ARTILLERY", 95, "Screens\FOBA\tank_ca.paa", [0.2,0.6,0.99,1]]
+                [2101, _x, _x, "ARTILLERY", 950, "Screens\FOBA\tank_ca.paa", [0.2,0.6,0.99,1]]
             ] call FLO_fnc_addConditionalItem;
         } forEach [F_Art_01, F_Art_02];
     };
@@ -162,14 +192,17 @@ if (((typeOf player == "B_G_officer_F") or (typeOf player == F_Officer) or (lead
         // Respawn helicopter (Yellow-Green)
         [
             F_Heli_04 != "",
-            [2102, F_Heli_04, F_Heli_04, "HELI RESPAWN", 55, "\A3\Air_F_Beta\Heli_Transport_01\Data\UI\Heli_Transport_01_base_CA.paa", [0.9,1,0,1]]
+            [2102, F_Heli_04, F_Heli_04, "RESPAWN HELI", 55, "\A3\Air_F_Beta\Heli_Transport_01\Data\UI\Heli_Transport_01_base_CA.paa", [0.9,1,0,1]]
         ] call FLO_fnc_addConditionalItem;
+
+        // RHS Mi24Vt_vvsc
+        [2102, "RHS_Mi24Vt_vvsc", "RHS_Mi24Vt_vvsc", "HEAVY LIFT HELI", 80, "\A3\Air_F_Beta\Heli_Transport_01\Data\UI\Heli_Transport_01_base_CA.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
         
         // Gunship helicopters
         {
             [
                 _x != "",
-                [2102, _x, _x, "HELI GUNSHIP", 80, "\A3\Air_F_Beta\Heli_Transport_01\Data\UI\Heli_Transport_01_base_CA.paa", [0.2,0.6,0.99,1]]
+                [2102, _x, _x, "GUNSHIP HELI", 80, "\A3\Air_F_Beta\Heli_Transport_01\Data\UI\Heli_Transport_01_base_CA.paa", [0.2,0.6,0.99,1]]
             ] call FLO_fnc_addConditionalItem;
         } forEach [F_Heli_06_G, F_Heli_07_G];
         
@@ -189,6 +222,8 @@ if (((typeOf player == "B_G_officer_F") or (typeOf player == F_Officer) or (lead
     
     // Radar-dependent UAVs
     if (_hasRadar) then {
+        [2103, "mavik_3_BLU", "mavik_3_BLU", "UAV", 20, "Screens\FOBA\uav_05_icon_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+        [2103, "mavik_3T_BLU", "mavik_3T_BLU", "UAV", 30, "Screens\FOBA\uav_05_icon_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
         // Custom UAVs
         {
             [
@@ -206,34 +241,63 @@ if (((typeOf player == "B_G_officer_F") or (typeOf player == F_Officer) or (lead
     // CONTAINERS
     [2103, "B_Slingload_01_Medevac_F", "B_Slingload_01_Medevac_F", "CONTAINER", 35, "Screens\FOBA\container_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
     [2103, "B_Slingload_01_Ammo_F", "B_Slingload_01_Ammo_F", "CONTAINER", 35, "Screens\FOBA\container_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
-    [2103, "B_Slingload_01_Repair_F", "B_Slingload_01_Repair_F", "CONTAINER", 100, "Screens\FOBA\container_ca.paa", [1,0.6,0,1]] call FLO_fnc_addListBoxItem;
+    [2103, "B_Slingload_01_Repair_F", "B_Slingload_01_Repair_F", "CONTAINER", 35, "Screens\FOBA\container_ca.paa", [1,0.6,0,1]] call FLO_fnc_addListBoxItem;
     [2103, "B_Slingload_01_Fuel_F", "B_Slingload_01_Fuel_F", "CONTAINER", 35, "Screens\FOBA\container_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
 
     // Turrets
     {
         [
             _x != "",
-            [2103, _x, _x, "STATIC", 35, "Screens\FOBA\icon_HMG_02_ca.paa", [1,1,1,1]]
+            [2103, _x, _x, "STATIC", 30, "Screens\FOBA\icon_HMG_02_ca.paa", [1,1,1,1]]
         ] call FLO_fnc_addConditionalItem;
     } forEach [F_turret_01, F_turret_02, F_turret_03];
     
     // ARTILLERY (if available)
-    if (F_Art_00 != "") then { 
-        [2103, F_Art_00, F_Art_00, "STATIC", 35, "Screens\FOBA\icon_HMG_02_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+    if (_hasRadar) then { 
+        [2103, F_Art_00, F_Art_00, "MORTAR", 50, "Screens\FOBA\icon_HMG_02_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_120mm_pm_43", "tbd_120mm_pm_43", "MORTAR", 125, "Screens\FOBA\icon_HMG_02_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_2b9_vasilek", "tbd_2b9_vasilek", "ARTILLERY MORTAR", 175, "Screens\FOBA\icon_HMG_02_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mt12", "tbd_mt12", "ARTILLERY/AT GUN", 200, "Screens\FOBA\icon_HMG_02_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_d20", "tbd_d20", "ARTILLERY", 250, "Screens\FOBA\icon_HMG_02_ca.paa", [1,1,1,1]] call FLO_fnc_addListBoxItem;
+    };
+    
+    // TBD Advanced Ammo
+    if (_hasRadar) then {
+        [2103, "tbd_mortars_100mm_box_atgm", "tbd_mortars_100mm_box_atgm", "SPECIAL AMMO", 10, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortars_100mm_box_ap", "tbd_mortars_100mm_box_ap", "SPECIAL AMMO", 2, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortars_100mm_box_he", "tbd_mortars_100mm_box_he", "SPECIAL AMMO", 2, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortars_100mm_box_heat", "tbd_mortars_100mm_box_heat", "SPECIAL AMMO", 2, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortars_100mm_box_stal", "tbd_mortars_100mm_box_stal", "SPECIAL AMMO", 75, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortars_105mm_box_dpicm", "tbd_mortars_105mm_box_dpicm", "SPECIAL AMMO", 10, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortars_105mm_box", "tbd_mortars_105mm_box", "SPECIAL AMMO", 2, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortars_105mm_box_laser", "tbd_mortars_105mm_box_laser", "SPECIAL AMMO", 30, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortars_105mm_box_smoke", "tbd_mortars_105mm_box_smoke", "SPECIAL AMMO", 2, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortars_107mm_box_he", "tbd_mortars_107mm_box_he", "SPECIAL AMMO", 2, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortar_120mm_box", "tbd_mortar_120mm_box", "SPECIAL AMMO", 2, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortars_152mm_box_dpicm", "tbd_mortars_152mm_box_dpicm", "SPECIAL AMMO", 10, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortars_152mm_box_he", "tbd_mortars_152mm_box_he", "SPECIAL AMMO", 5, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortars_152mm_box_laser", "tbd_mortars_152mm_box_laser", "SPECIAL AMMO", 40, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_2b9_vasilek_magazine", "tbd_2b9_vasilek_magazine", "SPECIAL AMMO", 3, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortar_81mm_box_he", "tbd_mortar_81mm_box_he", "SPECIAL AMMO", 0, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortar_81mm_box_illum", "tbd_mortar_81mm_box_illum", "SPECIAL AMMO", 5, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortar_82mm_box_cumul", "tbd_mortar_82mm_box_cumul", "SPECIAL AMMO", 10, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortar_82mm_box_he", "tbd_mortar_82mm_box_he", "SPECIAL AMMO", 0, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortar_82mm_box_illum", "tbd_mortar_82mm_box_illum", "SPECIAL AMMO", 2, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
+        [2103, "tbd_mortar_82mm_box_smoke", "tbd_mortar_82mm_box_smoke", "SPECIAL AMMO", 1, "Screens\FOBA\icon_HMG_02_ca.paa", [0.5,0,0.5,1]] call FLO_fnc_addListBoxItem;
     };
     
     // SAM systems (only if radar is nearby)
     if (_hasRadar) then {
         // SAM and AAA systems
-        [2103, "B_SAM_System_01_F", "B_SAM_System_01_F", "STATIC", 35, "Screens\FOBA\icon_HMG_02_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
-        [2103, "B_SAM_System_02_F", "B_SAM_System_02_F", "STATIC", 35, "Screens\FOBA\icon_HMG_02_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
-        [2103, "B_SAM_System_03_F", "B_SAM_System_03_F", "STATIC", 35, "Screens\FOBA\icon_HMG_02_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
-        [2103, "B_AAA_System_01_F", "B_AAA_System_01_F", "STATIC", 35, "Screens\FOBA\icon_HMG_02_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
+        [2103, "B_SAM_System_01_F", "B_SAM_System_01_F", "STATIC", 500, "Screens\FOBA\icon_HMG_02_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
+        [2103, "B_SAM_System_02_F", "B_SAM_System_02_F", "STATIC", 500, "Screens\FOBA\icon_HMG_02_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
+        [2103, "B_SAM_System_03_F", "B_SAM_System_03_F", "STATIC", 500, "Screens\FOBA\icon_HMG_02_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
+        [2103, "B_AAA_System_01_F", "B_AAA_System_01_F", "STATIC", 500, "Screens\FOBA\icon_HMG_02_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
     };
     
     // RADAR system
     if (F_RADAR != "") then { 
-        [2103, F_RADAR, F_RADAR, "OPERATION CONTROL SYSTEM", 250, "Screens\FOBA\Radar_ca.paa", [0.2,0.6,0.99,1]] call FLO_fnc_addListBoxItem;
+        [2103, F_RADAR, F_RADAR, "OPERATION CONTROL SYSTEM", 250, "Screens\FOBA\Radar_ca.paa", [1,0,0,1]] call FLO_fnc_addListBoxItem;
     };
 };
 
@@ -470,6 +534,10 @@ FLO_fnc_configureVehicle = {
          (markerText "Friendly_Handle" == "United States Armed Forces _ Woodland _ RHS")) && 
          (_VehName == "rhsusf_mrzr4_d")) then {
         [_vehicle, ["mud_olive", 1]] call BIS_fnc_initVehicle;
+    };
+
+    if (_VehName == "RHS_Mi24Vt_vvsc") then {
+        [_vehicle, ["CDF", 1]] call BIS_fnc_initVehicle;
     };
     
     // Configure repair slingload container
