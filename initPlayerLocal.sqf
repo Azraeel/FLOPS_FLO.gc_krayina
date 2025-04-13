@@ -5,6 +5,8 @@ titleText ["Frontline Operations Group Presents...", "BLACK IN",9999];
 
 sleep 1;
 
+setMissionOptions createHashMapFromArray [["AIThinkOnlyLocal", true]];
+
 StartingLocationDone = false;
 
 // After Mission Loaded

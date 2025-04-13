@@ -36,6 +36,8 @@ Centerposition = [worldSize / 2, worldsize / 2, 0];
 
 [] call FLO_fnc_heartbeat;
 
+setMissionOptions createHashMapFromArray [["AIThinkOnlyLocal", true]];
+
 if (isNil "F_Init") then {F_Init = false;};
 
 // After Mission Loaded
