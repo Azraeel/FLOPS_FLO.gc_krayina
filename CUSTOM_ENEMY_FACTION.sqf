@@ -1,38 +1,38 @@
 // Where are Classnames ? Right click on any Unit or Vehicle in the Editor and Select find in CFG viewer, Last Name in the [path] tab is the Classname,
 
-// CUSTOM_ENEMY_FACTION.sqf
-// Defines the OPFOR faction units and equipment for the mission
-// Used for both physical and virtual spawning through the virtualization system
-
 /*
- * Unit and Vehicle Type Definitions
- * These arrays define what types of units and vehicles can spawn in the mission.
-*/
+ * TEMPLATE EXAMPLE - UNCOMMENT AND REPLACE WITH YOUR DESIRED CLASSES
+ *
+East_Ground_Vehicles_Ambient = ["Opf_I_I_Offroad_01_F",  "Opf_I_I_Van_01_transport_F", "Opf_I_I_Offroad_01_F", "Opf_O_S_Offroad_01_armed_F", "Opf_O_S_Offroad_01_armed_F", "Opf_O_S_Offroad_01_AT_F"]; 
+East_Ground_Vehicles_Light = ["Opf_O_S_Offroad_01_armed_F", "Opf_O_S_Offroad_01_armed_F", "Opf_O_S_APC_Tracked_02_cannon_F", "Opf_O_S_Offroad_01_AT_F"]; 
+East_Ground_Vehicles_Heavy = ["Opf_O_S_APC_Tracked_02_cannon_F","Opf_O_S_APC_Tracked_02_cannon_F", "Opf_O_S_Offroad_01_AT_F", "Opf_O_S_Offroad_01_AT_F", "Opf_O_S_Offroad_01_armed_F"]; 
+East_Ground_Transport = ["Opf_O_S_Offroad_01_F",  "Opf_O_S_Truck_02_transport_F"]; 
 
-// Predefined Groups from the config
-// Used as the primary groups for the virtualization system
+East_Air_Transport = ["Opf_I_R_Heli_Light_02_unarmed_F"];
+East_Air_Heli = ["O_Heli_Light_02_dynamicLoadout_F"]; 
+East_Air_Jet = ["O_Heli_Light_02_dynamicLoadout_F"]; 
+
+East_Units = ["Opf_O_S_Soldier_9_F","Opf_O_S_Soldier_8_F","Opf_O_S_Soldier_7_F","Opf_O_S_Soldier_6_F","Opf_O_S_Soldier_5_F","Opf_O_S_Soldier_4_F","Opf_O_S_Soldier_3_F","Opf_O_S_Soldier_2_F","Opf_O_S_Soldier_1_F", "Opf_O_P_soldier_TL_F", "Opf_O_P_soldier_1_F", "Opf_O_P_soldier_LAT_F", "Opf_O_P_soldier_M_F", "Opf_O_P_soldier_GL_F", "Opf_O_P_soldier_AR_F", "Opf_O_P_soldier_exp_F", "Opf_O_P_medic_F"];
+East_Units_Officers = ["Opf_O_S_Soldier_2_F"];
+
 East_Groups = [
-(configFile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "HAF_InfSquad"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "HAF_InfSquad_Weapons"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "HAF_InfTeam"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "HAF_InfTeam_AA"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "HAF_InfTeam_AT"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Infantry" >> "I_InfTeam_Light"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_F" >> "SpecOps" >> "HAF_SniperTeam"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Support" >> "HAF_Support_EOD"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Support" >> "HAF_Support_GMG"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Support" >> "HAF_Support_MG"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Support" >> "HAF_Support_Mort"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_F" >> "Support" >> "HAF_Support_ENG"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_Raven_F" >> "Infantry" >> "I_Raven_InfSquad"),
-(configFile >> "CfgGroups" >> "Indep" >> "IND_Raven_F" >> "Infantry" >> "I_Raven_InfTeam")
+(configfile >> "CfgGroups" >> "East" >> "Opf_OPF_S_F" >> "Infantry" >> "SeparatistShockTeam"),
+(configfile >> "CfgGroups" >> "East" >> "Opf_OPF_S_F" >> "Infantry" >> "SeparatistFireTeam"),
+(configfile >> "CfgGroups" >> "East" >> "Opf_OPF_S_F" >> "Infantry" >> "SeparatistCombatGroup")
 ];
 */
 
 // Fill the Lines with your Desired Classnames in the Manners Shown Above,
 // Where are Classnames ? Right click on any Unit or Vehicle in the Editor and Select find in CFG viewer, Last Name in the [path] tab is the Classname,
 
-// Default OPFOR vehicles (Vanilla Arma 3 CSAT)
+// Default OPFOR vehicles
+East_Groups = [
+    (configFile >> "CfgGroups" >> "East" >> "RUS_GRU_SpecialPurposeTroops" >> "SpecOps" >> "rus_gru_recondetachment"),
+    (configFile >> "CfgGroups" >> "East" >> "RUS_MP_NavalInfantry" >> "Dismounted" >> "rus_mp_dismounted_detachment"),
+    (configFile >> "CfgGroups" >> "East" >> "RUS_VDV_AirborneTroops" >> "SpecOps" >> "rus_vdv_recondetachment"),
+    (configFile >> "CfgGroups" >> "East" >> "RUS_VDV_AirborneTroops" >> "Dismounted" >> "rus_vdv_dismounted_detachment")
+];
+
 East_Ground_Vehicles_Ambient = ["RUS_GRU_asn233115"]; 
 
 East_Ground_Vehicles_Light = ["RUS_MSV_brdm2a", "RUS_MSV_btr82a", "RUS_MSV_btr80", "RUS_GRU_asn233115sts", "RUS_VDV_bmd2k", "RUS_VDV_bmd2",
@@ -77,18 +77,84 @@ East_Units = [
     "RUS_VDV_sergeant",
     "RUS_VDV_seniorsergeant"
 ];
-// Fire Observer Units for Artillery
-East_FireObserver = ["I_RadioOperator_F"];
-// Officer Units
-East_Units_Officers = ["I_officer_F"];
 
 East_FireObserver = ["RUS_VDV_radiotelephonist"];
 
 East_Units_Officers = ["RUS_VDV_lieutenant"];
 
-East_Groups = [
-    (configFile >> "CfgGroups" >> "East" >> "RUS_GRU_SpecialPurposeTroops" >> "SpecOps" >> "rus_gru_recondetachment"),
-    (configFile >> "CfgGroups" >> "East" >> "RUS_MP_NavalInfantry" >> "Dismounted" >> "rus_mp_dismounted_detachment"),
-    (configFile >> "CfgGroups" >> "East" >> "RUS_VDV_AirborneTroops" >> "SpecOps" >> "rus_vdv_recondetachment"),
-    (configFile >> "CfgGroups" >> "East" >> "RUS_VDV_AirborneTroops" >> "Dismounted" >> "rus_vdv_dismounted_detachment")
+/*
+ * OPFOR Virtualization Objective Configuration
+ * This section defines how many of each unit type should spawn at different objective types
+ * These are the default settings that will be used by the virtualization system
+*/
+
+// Structure: [objective type, [[group type, count], [group type, count], ...]]
+OPFOR_Objective_Groups = [
+    // Support objectives - mix of infantry and light vehicles
+    ["o_support", [
+        ["infantry", 3], 
+        ["motorized", 2]
+    ]],
+    
+    // Neutral support objectives - lighter security
+    ["n_support", [
+        ["infantry", 2], 
+        ["motorized", 1]
+    ]],
+    
+    // Installation objectives - mix of infantry and heavy vehicles
+    ["o_installation", [
+        ["infantry", 4], 
+        ["mechanized", 2],
+        ["armor", 1]
+    ]],
+    
+    // Neutral installation objectives
+    ["n_installation", [
+        ["infantry", 3], 
+        ["mechanized", 1]
+    ]],
+    
+    // Anti-air objectives - AA vehicles and infantry
+    ["o_antiair", [
+        ["infantry", 2],
+        ["motorized", 1],
+        ["air", 1]
+    ]],
+    
+    // Service objectives - light vehicles and infantry
+    ["o_service", [
+        ["infantry", 2],
+        ["motorized", 2]
+    ]],
+    
+    // Power plant objectives - infantry defense
+    ["loc_Power", [
+        ["infantry", 3],
+        ["motorized", 1]
+    ]],
+    
+    // Ruins objectives - light infantry presence
+    ["loc_Ruin", [
+        ["infantry", 1]
+    ]],
+    
+    // Recon objectives - small infantry and light vehicles
+    ["o_recon", [
+        ["infantry", 2],
+        ["motorized", 1],
+        ["helicopter", 1]
+    ]],
+    
+    // Infantry objectives - heavier infantry presence
+    ["o_inf", [
+        ["infantry", 4],
+        ["motorized", 1]
+    ]]
 ];
+
+/*
+ * Configure activation distance for the virtualization system
+ * This is the distance in meters that a player needs to be from a virtual group for it to physically spawn in the game
+ */ 
+OPFOR_Virtualization_Distance = 2000;
